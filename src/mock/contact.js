@@ -4,7 +4,7 @@ export const contact = {
   owner: "Ashish Wankhede",
   phone: "9850983389",
   whatsapp: "919850983389",
-  email: "tridevx9@gmail.com",
+  email: "Confianza@supportgmail.com",
   instagram: "https://www.instagram.com/confianza_events",
   address: {
     line1: "Indrayani Complex",

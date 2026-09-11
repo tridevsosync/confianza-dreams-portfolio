@@ -52,7 +52,13 @@ export function SiteProvider({ children }) {
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem(STORAGE_KEY);
-      if (raw) setData({ ...seed(), ...JSON.parse(raw) });
+      if (raw) {
+        const parsed = JSON.parse(raw);
+        if (parsed.contact && (parsed.contact.email === "tridevx9@gmail.com" || !parsed.contact.email)) {
+          parsed.contact.email = "Confianza@supportgmail.com";
+        }
+        setData({ ...seed(), ...parsed });
+      }
       const msgs = window.localStorage.getItem(MESSAGES_KEY);
       if (msgs) setMessages(JSON.parse(msgs));
       const t = window.localStorage.getItem(THEME_KEY);

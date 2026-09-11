@@ -641,6 +641,201 @@ Services
 Portfolio
 
 Gallery
+Login Page
+
+Use hardcoded credentials
+
+Username
+
+admin
+
+Password
+
+admin123
+
+Store login session in LocalStorage.
+
+After login
+
+Dashboard
+
+Sidebar
+
+Overview Cards
+
+Events
+
+Gallery
+
+Portfolio
+
+Services
+
+Testimonials
+
+Blogs
+
+FAQ
+
+Hero
+
+Contact Messages
+
+Website Settings
+
+Logout
+
+Admin Features
+
+Everything should be editable.
+
+Use LocalStorage.
+
+No database.
+
+Editable modules
+
+Hero
+
+Headline
+
+Subtitle
+
+Buttons
+
+Hero Images
+
+About
+
+Services
+
+Portfolio
+
+Gallery
+
+Testimonials
+
+FAQ
+
+Blogs
+
+Statistics
+
+Team
+
+Contact Details
+
+Social Links
+
+Business Hours
+
+Logo
+
+Theme Colors
+
+Footer
+
+Website Settings
+
+SEO Metadata
+
+Homepage Sections
+
+Enable Disable Sections
+
+Drag ordering (simple up/down buttons)
+
+Animations
+
+Use ONLY CSS and Tailwind animations.
+
+No animation libraries.
+
+Include
+
+Fade
+
+Slide Up
+
+Zoom
+
+Hover Scale
+
+Button Ripple
+
+Image Zoom
+
+Smooth scrolling
+
+Sticky navbar
+
+Glass navbar
+
+Back to Top button
+
+Loading Screen
+
+Skeleton Cards
+
+Performance
+
+Lazy load images
+
+Reusable Components
+
+Responsive
+
+SEO Friendly
+
+Clean Folder Structure
+
+No unused code
+
+Proper comments
+
+Component based architecture
+
+Folder Structure src/
+
+components/
+
+pages/
+
+layouts/
+
+assets/
+
+mock/
+
+hooks/
+
+utils/
+
+styles/
+
+context/
+
+App.jsx
+
+main.jsx Navbar
+
+Transparent
+
+Glass
+
+Sticky
+
+Logo
+
+Home
+
+About
+
+Services
+
+Portfolio
+
+Gallery
 
 Testimonials
 
@@ -648,51 +843,14 @@ Blog
 
 Contact
 
-Book Consultation Button
-
-Mobile Menu
-
 Contact Information
 
-Business
-
-Confianza Event's and Entertainment
-
-Owner
-
-Ashish Wankhede
-
-Phone
-
-9850983389
-
-Email
-
-tridevx9@gmail.com
-
-Instagram
-
-https://www.instagram.com/confianza_events
-
-Address
-
-Indrayani Complex
-
-Colony
-
-Near Mr DIY
-
-Warje Jakat Naka
-
-Pune
-
-411052
-
-Images
-
-Use high-quality royalty-free wedding placeholder images.
-
-Keep all image paths inside mock JSON so the admin can change them later.
+Business: Confianza Event's and Entertainment  
+Owner: Ashish Wankhede  
+Phone: 9850983389  
+Email: Confianza@supportgmail.com  
+Instagram: https://www.instagram.com/confianza_events  
+Address: Indrayani Complex, near Mr DIY, Warje Jakat Naka, Pune 411052  
 
 Extra Premium Features Floating WhatsApp Button Call Now Button Book Consultation CTA Scroll Progress Indicator Elegant Mouse Cursor Glow using CSS only Before/After Decor Showcase Wedding Theme Categories Client Logo Carousel (CSS only) Event Calendar Preview (Mock) Wedding Budget Calculator (Frontend only) Wedding Package Comparison Cards Theme Selector (Light/Luxury) Dynamic Hero Background Rotation Dynamic SEO title based on page 404 Page Custom Loader with Confianza initials Fully responsive for Mobile, Tablet, Laptop, and 4K screens Code Quality Requirements Clean and modular React components Reusable UI architecture No TypeScript No external state management libraries No backend No API calls No database LocalStorage persistence only Responsive and accessible Well-structured Tailwind utility classes Professional code organization suitable for future backend integration
 
