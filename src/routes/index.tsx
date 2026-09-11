@@ -1,24 +1,65 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useSite } from "../context/SiteContext";
+import SiteLayout from "../layouts/SiteLayout";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+// Home Sections
+import HeroSection from "../components/home/HeroSection";
+import AboutSection from "../components/home/AboutSection";
+import ServicesSection from "../components/home/ServicesSection";
+import WhyChooseUsSection from "../components/home/WhyChooseUsSection";
+import BeforeAfterSection from "../components/home/BeforeAfterSection";
+import PortfolioSection from "../components/home/PortfolioSection";
+import ProcessSection from "../components/home/ProcessSection";
+import StatsSection from "../components/home/StatsSection";
+import PackagesSection from "../components/home/PackagesSection";
+import BudgetCalculatorSection from "../components/home/BudgetCalculatorSection";
+import PartnerMarqueeSection from "../components/home/PartnerMarqueeSection";
+import TestimonialsSection from "../components/home/TestimonialsSection";
+import TeamSection from "../components/home/TeamSection";
+import GallerySection from "../components/home/GallerySection";
+import FaqSection from "../components/home/FaqSection";
+import BlogSection from "../components/home/BlogSection";
+import InstagramSection from "../components/home/InstagramSection";
+import ContactSection from "../components/home/ContactSection";
+
 export const Route = createFileRoute("/")({
-  component: Index,
+  component: HomePage,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+const SECTION_COMPONENTS = {
+  hero: HeroSection,
+  about: AboutSection,
+  services: ServicesSection,
+  why: WhyChooseUsSection,
+  beforeAfter: BeforeAfterSection,
+  portfolio: PortfolioSection,
+  process: ProcessSection,
+  stats: StatsSection,
+  packages: PackagesSection,
+  calculator: BudgetCalculatorSection,
+  partners: PartnerMarqueeSection,
+  testimonials: TestimonialsSection,
+  team: TeamSection,
+  gallery: GallerySection,
+  faq: FaqSection,
+  blog: BlogSection,
+  instagram: InstagramSection,
+  contact: ContactSection,
+};
+
+function HomePage() {
+  const { settings } = useSite();
+
+  const sections = settings?.sections || [];
+
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <SiteLayout revealKey={JSON.stringify(sections.map((s) => s.id + s.enabled))}>
+      {sections.map((sec) => {
+        if (!sec.enabled) return null;
+        const Component = SECTION_COMPONENTS[sec.id];
+        if (!Component) return null;
+        return <Component key={sec.id} />;
+      })}
+    </SiteLayout>
   );
 }
